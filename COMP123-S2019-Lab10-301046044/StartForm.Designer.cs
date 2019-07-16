@@ -1,6 +1,6 @@
 ﻿namespace COMP123_S2019_Lab10_301046044
 {
-    partial class MainForm
+    partial class StartForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MainFormLabel = new System.Windows.Forms.Label();
-            this.MainFormNextButton = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.StartFormLabel = new System.Windows.Forms.Label();
+            this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // MainFormLabel
+            // StartFormLabel
             // 
-            this.MainFormLabel.AutoSize = true;
-            this.MainFormLabel.Location = new System.Drawing.Point(12, 9);
-            this.MainFormLabel.Name = "MainFormLabel";
-            this.MainFormLabel.Size = new System.Drawing.Size(299, 31);
-            this.MainFormLabel.TabIndex = 0;
-            this.MainFormLabel.Text = "Welcome to Main Form!";
+            this.StartFormLabel.AutoSize = true;
+            this.StartFormLabel.Location = new System.Drawing.Point(12, 9);
+            this.StartFormLabel.Name = "StartFormLabel";
+            this.StartFormLabel.Size = new System.Drawing.Size(299, 31);
+            this.StartFormLabel.TabIndex = 0;
+            this.StartFormLabel.Text = "Welcome to Start Form!";
             // 
-            // MainFormNextButton
+            // SplashTimer
             // 
-            this.MainFormNextButton.Location = new System.Drawing.Point(18, 52);
-            this.MainFormNextButton.Name = "MainFormNextButton";
-            this.MainFormNextButton.Size = new System.Drawing.Size(220, 54);
-            this.MainFormNextButton.TabIndex = 1;
-            this.MainFormNextButton.Text = "Next Button";
-            this.MainFormNextButton.UseVisualStyleBackColor = true;
-            this.MainFormNextButton.Click += new System.EventHandler(this.MainFormNextButton_Click);
+            this.SplashTimer.Interval = 3000;
+            this.SplashTimer.Tick += new System.EventHandler(this.SplashTimer_Tick);
             // 
-            // MainForm
+            // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.MainFormNextButton);
-            this.Controls.Add(this.MainFormLabel);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ControlBox = false;
+            this.Controls.Add(this.StartFormLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.MaximizeBox = false;
-            this.Name = "MainForm";
+            this.Name = "StartForm";
+            this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main Form";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Text = "StartForm";
+            this.Load += new System.EventHandler(this.StartForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,8 +71,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label MainFormLabel;
-        private System.Windows.Forms.Button MainFormNextButton;
+        private System.Windows.Forms.Label StartFormLabel;
+        private System.Windows.Forms.Timer SplashTimer;
     }
 }
-
